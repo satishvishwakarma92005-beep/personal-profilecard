@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile Card</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #16213e, #0f766e);
+        }
+
+        .card {
+            width: 350px;
+            background: white;
+            border-radius: 22px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+        }
+
+        .profile {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #0f766e;
+            margin-bottom: 15px;
+        }
+
+        h1 {
+            color: #16213e;
+            font-size: 25px;
+            margin-bottom: 7px;
+        }
+
+        .course {
+            color: #0f766e;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .college {
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .line {
+            width: 70px;
+            height: 3px;
+            background: #0f766e;
+            margin: 15px auto;
+            border-radius: 5px;
+        }
+
+        .info {
+            text-align: left;
+            margin-top: 15px;
+        }
+
+        .info p {
+            padding: 8px 0;
+            color: #444;
+            font-size: 14px;
+        }
+
+        .info span {
+            font-weight: bold;
+            color: #16213e;
+        }
+
+        .button {
+            margin-top: 20px;
+            padding: 10px 22px;
+            border: none;
+            border-radius: 20px;
+            background: #0f766e;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #16213e;
+        }
+
+        #message {
+            margin-top: 12px;
+            font-size: 13px;
+            color: #0f766e;
+            display: none;
+        }
+
+        .social {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+        }
+
+        .social a {
+            text-decoration: none;
+            color: #16213e;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .social a:hover {
+            color: #0f766e;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+
+        <!-- Apni photo same folder me profile.jpg naam se rakho -->
+        <img src="photo.jpg" class="profile" alt="Student Photo">
+
+        <h1>Satish Vishwakarma</h1>
+
+        <p class="course">
+            B.Tech - Computer Science Engineering
+        </p>
+
+        <p class="college">
+            SISTEC-R, Bhopal
+        </p>
+
+        <div class="line"></div>
+
+        <div class="info">
+
+            <p>
+                <span>Year:</span> 2nd Year
+            </p>
+
+            <p>
+                <span>Branch:</span> Computer Science
+            </p>
+
+            <p>
+                <span>Interest:</span> Full-Stack Development
+            </p>
+
+            <p>
+                <span>Skills:</span> C,C++,HTML, CSS, JavaScript
+            </p>
+
+        </div>
+
+        <button class="button" onclick="showMessage()">
+            About Me
+        </button>
+
+        <p id="message"></p>
+
+        <div class="social">
+            <a href="https://github.com/satishvishwakarma92005-beep">GitHub</a>
+            <a href="https://www.linkedin.com/in/satish-vishwakarma-8628ba396?">LinkedIn</a>
+            <a href="https://www.instagram.com/satiish.vishwakarma?">Instagram</a>
+        </div>
+
+    </div>
+
+
+    <script>
+        function showMessage() {
+
+            let msg = document.getElementById("message");
+
+            msg.style.display = "block";
+
+            msg.innerHTML =
+"I am a CSE student learning Web Development and working towards becoming a Full-Stack Developer.";
+        }
+    </script>
+
+</body>
+</html>
